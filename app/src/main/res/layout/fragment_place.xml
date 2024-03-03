@@ -9,13 +9,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:src="@drawable/logo" />
+        android:src="@drawable/bg_place" />
 
     <FrameLayout
         android:id="@+id/actionBarLayout"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="@color/design_default_color_primary">
+        android:background="#2CBEEA">
 
         <EditText
             android:id="@+id/searchPlaceEdit"
@@ -24,8 +24,10 @@
             android:layout_gravity="center_vertical"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
             android:hint="请输入地址"
-            android:background="@drawable/logo"/>
+            android:background="@drawable/search_bg"/>
     </FrameLayout>
 
     <androidx.recyclerview.widget.RecyclerView

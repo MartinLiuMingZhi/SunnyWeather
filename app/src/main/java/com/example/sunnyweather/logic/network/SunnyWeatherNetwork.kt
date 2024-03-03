@@ -1,6 +1,6 @@
 package com.example.sunnyweather.logic.network
 
-import android.content.ContentValues.TAG
+
 import android.util.Log
 import retrofit2.Call
 import retrofit2.Callback
@@ -22,7 +22,7 @@ object SunnyWeatherNetwork {
 
                 override fun onResponse(call: Call<T>, response: Response<T>) {
                     val body = response.body()
-                    Log.d(TAG, "OnResponse: ${response.code()}")
+                    Log.d("TAG", "OnResponse: ${response.body()}")
                     if (body != null) continuation.resume(body)
                     else continuation.resumeWithException(
                         RuntimeException("response body is null")
