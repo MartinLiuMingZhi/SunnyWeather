@@ -1,11 +1,14 @@
 package com.example.sunnyweather.ui.place
 
+import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.example.sunnyweather.databinding.PlaceItemBinding
 import com.example.sunnyweather.logic.model.Place
+import com.example.sunnyweather.ui.weather.WeatherActivity
 
 
 class PlaceAdapter(private val fragment: Fragment,private val placeList: List<Place>):
@@ -31,6 +34,17 @@ class PlaceAdapter(private val fragment: Fragment,private val placeList: List<Pl
         val place = placeList[position]
         binding.placeName.text = place.name
         binding.placeAddress.text = place.address
+
+        holder.itemView.setOnClickListener {
+            val intent = Intent(fragment.requireContext(),WeatherActivity::class.java).apply {
+                putExtra("location_lng",place.location.lng)
+                putExtra("location_lat",place.location.lat)
+                putExtra("place_name",place.name)
+                Log.d("TAG","adapter"+place.location)
+            }
+            fragment.startActivity(intent)
+            fragment.requireActivity().finish()
+        }
     }
 
 }
