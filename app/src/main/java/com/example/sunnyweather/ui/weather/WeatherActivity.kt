@@ -33,9 +33,9 @@ class WeatherActivity :AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityWeatherBinding.inflate(layoutInflater)
-        nowBinding = NowBinding.inflate(layoutInflater)
-        forecastBinding = ForecastBinding.inflate(layoutInflater)
-        lifeIndexBinding = LifeIndexBinding.inflate(layoutInflater)
+        nowBinding = binding.nowLayout
+        forecastBinding = binding.forecastLayout
+        lifeIndexBinding = binding.lifeIndexLayout
 
 
         val decorView = window.decorView

@@ -4,14 +4,13 @@ import android.content.Intent
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.example.sunnyweather.databinding.PlaceItemBinding
 import com.example.sunnyweather.logic.model.Place
 import com.example.sunnyweather.ui.weather.WeatherActivity
 
 
-class PlaceAdapter(private val fragment: Fragment,private val placeList: List<Place>):
+class PlaceAdapter(private val fragment: PlaceFragment,private val placeList: List<Place>):
     RecyclerView.Adapter<PlaceAdapter.ViewHolder>() {
 
         inner class ViewHolder(val binding: PlaceItemBinding) : RecyclerView.ViewHolder(binding.root) {
@@ -42,6 +41,7 @@ class PlaceAdapter(private val fragment: Fragment,private val placeList: List<Pl
                 putExtra("place_name",place.name)
                 Log.d("TAG","adapter"+place.location)
             }
+            fragment.viewModel.savePlace(place)
             fragment.startActivity(intent)
             fragment.requireActivity().finish()
         }
