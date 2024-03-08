@@ -35,7 +35,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="10dp"
                     android:src="@drawable/ic_coldrisk" />
 
                 <LinearLayout
@@ -43,7 +43,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_toEndOf="@id/coldRiskImg"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="10dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -73,7 +73,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="10dp"
                     android:src="@drawable/ic_dressing" />
 
                 <LinearLayout
@@ -81,7 +81,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_toEndOf="@id/dressingImg"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="10dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -106,6 +106,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:layout_marginBottom="20dp">
 
             <RelativeLayout
@@ -118,7 +119,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="10dp"
                     android:src="@drawable/ic_ultraviolet" />
 
                 <LinearLayout
@@ -126,7 +127,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:layout_toEndOf="@id/ultravioletImg"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="10dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -156,7 +157,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="10dp"
                     android:src="@drawable/ic_carwashing" />
 
                 <LinearLayout
@@ -164,7 +165,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:layout_toEndOf="@id/carWashingImg"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="10dp"
                     android:orientation="vertical">
 
                     <TextView
