@@ -1,4 +1,4 @@
-package com.example.sunnyweather.ui.place
+package com.example.sunnyweather.ui.weather
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -15,6 +15,14 @@ class WeatherViewModel:ViewModel() {
     var locationLat = ""
 
     var placeName = ""
+
+    var placeAddress = ""
+
+    var placeRealtimeTem = -100
+
+    var placeSkycon = ""
+
+    var isUpdatePlaceManage = false
 
     val weatherLiveData = locationLiveData.switchMap { location ->
         Repository.refreshWeather(location.lng,location.lat)

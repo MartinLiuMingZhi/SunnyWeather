@@ -21,6 +21,7 @@ object SunnyWeatherNetwork {
 
     suspend fun getDailyWeather(lng: String,lat: String) = weatherService.getDailyWeather(lng,lat).await()
 
+    suspend fun getHourlyWeather(lng: String, lat: String) = weatherService.getHourlyWeather(lng,lat).await()
     private suspend fun <T> Call<T>.await(): T {
         return suspendCoroutine { continuation ->
             enqueue(object : Callback<T> {
